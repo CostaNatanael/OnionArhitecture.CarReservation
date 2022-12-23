@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentAssertions" Version="6.8.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="7.0.1" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.4.1" />
+    <PackageReference Include="MockQueryable.Core" Version="7.0.0" />
+    <PackageReference Include="MockQueryable.Moq" Version="7.0.0" />
+    <PackageReference Include="Moq" Version="4.18.3" />
+    <PackageReference Include="OpenTracing" Version="0.12.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Extensions" Version="2.2.0" />
+    <PackageReference Include="xunit" Version="2.4.2" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\OnionArhitecture.CarReservation.Application\OnionArhitecture.CarReservation.Application.csproj" />
+    <ProjectReference Include="..\..\src\OnionArhitecture.CarReservation.Domain\OnionArhitecture.CarReservation.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="IntegrationTests\Cars\Commends\" />
+    <Folder Include="IntegrationTests\Cars\Queries\" />
+    <Folder Include="IntegrationTests\Reservation\Commends\" />
+    <Folder Include="IntegrationTests\Reservation\Queries\" />
+  </ItemGroup>
+
+</Project>
